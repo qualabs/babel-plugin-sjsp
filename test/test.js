@@ -6,9 +6,9 @@ import profiler from '../src/profiler'
 
 test('should transform function', async t => {
   const result = transformFileSync('./test/code/simple-func.js', {
-    plugins: [plugin],
+    plugins: [[plugin, { 'interval': 2 }]],
   })
-  const expected = `${profiler.replace('INTERVAL', 1)}
+  const expected = `${profiler.replace('INTERVAL', 2)}
 
 function simpleFunc() {
   var sjsp__state = sjsp__start("./test/code/simple-func.js", 1, 1, "simpleFunc", "function simpleFunc() {");

@@ -51,8 +51,8 @@ module.exports = (babel) => {
         enter(path, state) {
           lines = state.file.code.split(/\r?\n/);
         },
-        exit(path) {
-          const profiler = template(profilerStr)({ INTERVAL: types.numericLiteral(1) });
+        exit(path, state) {
+          const profiler = template(profilerStr)({ INTERVAL: types.numericLiteral(state.opts.interval || 1) });
           path.node.body.unshift(profiler);
         },
       },

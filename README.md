@@ -1,33 +1,43 @@
-# node-sjsp  - Simple JavaScript Profiler
+# babel-plugin-sjsp ⚡
 
-[![Build Status](https://secure.travis-ci.org/45deg/node-sjsp.png?branch=master)](http://travis-ci.org/45deg/node-sjsp)
+A babel plugin, for sjsp (Simple JavaScript Profiler).
+
+[![Build Status](https://img.shields.io/travis/bokuweb/babel-plugin-sjsp.svg?style=flat-square)](https://travis-ci.org/bokuweb/babel-plugin-sjsp)
+[![Version](https://img.shields.io/npm/v/babel-plugin-sjsp.svg?style=flat-square)](https://www.npmjs.com/package/babel-plugin-sjsp)
+
 
 ## What is it
 
-This is a JavaScript profiler implemented in Node.js, inspired by [sjsp](https://github.com/itchyny/sjsp), which is implemented in Haskell.
+This is a babel plugin for JavaScript profiler, inspired by [sjsp](https://github.com/itchyny/sjsp), which is implemented in Haskell.
+And forked from [node-sjsp](https://github.com/45deg/node-sjsp).
 
 ## How to install
 
 ```
-npm -g install node-sjsp
+npm install --save-dev babel-plugin-sjsp
 ```
 
 ## Usage
 
-If you want to inject profiling code into `something.js`, run
-```
-sjsp something.js
-```
-and then sjsp generates `something.sjsp.js` in the same directory.
-(you can use wildcard characters such that `sjsp *.js`)
+- .babelrc
 
-Next, rewrite your HTML code using `something.js` like below.
-```html
-<!-- <script src="something.js"></script> -->
-<script src="something.sjsp.js"></script>
+```
+{
+  "plugins": ["babel-plugin-sjsp", { "interval": 10 }]
+}
 ```
 
-Open the page with your browser and you can see profiles in the JavaScript console every 10 seconds. (you can change this interval by -i option)
+- Options
+
+### interval
+
+Type: `number`
+Default: `1` [sec]
+
+output interval.
+
+Open the page with your browser and you can see profiles in the JavaScript console every 1 seconds. (you can change this interval by `interval` option)
+
 ```
 ========== SORT BY TIME ==========
 time:    0.60sec   count:    1777    something.js          test1   (line:   7, col: 17)   function test1(){
@@ -53,10 +63,6 @@ See [original document](https://github.com/itchyny/sjsp#how-it-works)
 ## Limitation
 
 This profiling is available for browser only now.
-
-## Author
-
-45deg ([Twitter](https://twitter.com/___zoj))
 
 ## LICENSE
 
