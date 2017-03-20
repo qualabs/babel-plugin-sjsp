@@ -1,2 +1,2 @@
-node_modules
-*.sjsp.js
+node_modules/*
+example/dist/example/index.js
