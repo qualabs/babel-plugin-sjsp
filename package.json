@@ -1,8 +1,8 @@
 {
   "name": "babel-plugin-sjsp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "ava test/test.js",
     "build:example": "babel example/index.js -d example/dist"
@@ -16,5 +16,8 @@
   },
   "dependencies": {
     "babel-template": "^6.16.0"
-  }
+  },
+  "files": [
+    "src/"
+  ]
 }
