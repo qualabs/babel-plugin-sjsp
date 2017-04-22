@@ -1,3 +1,5 @@
+"use strict";
+
 const template = require('babel-template');
 const types = require('babel-types');
 const profilerStr = require('./profiler');

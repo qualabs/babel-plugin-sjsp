@@ -1,3 +1,5 @@
+"use strict";
+
 const profiler = `(function () {
   window.sjsp__result = window.sjsp__result || {};
   window.sjsp__state = window.sjsp__state || {
