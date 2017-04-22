@@ -9,7 +9,7 @@ A babel plugin, for sjsp (Simple JavaScript Profiler).
 ## What is it
 
 This is a babel plugin for JavaScript profiler, inspired by [sjsp](https://github.com/itchyny/sjsp), which is implemented in Haskell.
-And forked from [node-sjsp](https://github.com/45deg/node-sjsp).
+And `babel-plugin-sjsp` is forked from [node-sjsp](https://github.com/45deg/node-sjsp).
 
 ## How to install
 
