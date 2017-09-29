@@ -11,6 +11,8 @@ A babel plugin, for sjsp (Simple JavaScript Profiler).
 This is a babel plugin for JavaScript profiler, inspired by [sjsp](https://github.com/itchyny/sjsp), which is implemented in Haskell.
 And `babel-plugin-sjsp` is forked from [node-sjsp](https://github.com/45deg/node-sjsp).
 
+This fork supports Webpack (ie: it ignores Webpack internal functions while profiling), and adds fixes which were needed to transpile a React project.
+
 ## How to install
 
 ```
